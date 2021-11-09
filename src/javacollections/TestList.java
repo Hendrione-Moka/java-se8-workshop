@@ -48,8 +48,6 @@ public class TestList {
     for(String data : dataNama2){
       System.out.println(data);
     }
-
-    dataNama2.forEach(System.out::println);
   }
 
 }
