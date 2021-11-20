@@ -171,10 +171,19 @@ public class TestMap {
     List<List<String>> dataHobby = employeeList.stream().map(employee -> employee.getHobby())
         .collect(Collectors.toList());
 
+    List<String> dataName = employeeList.stream().map(employee -> employee.getName())
+        .collect(Collectors.toList());
+
     List<String> dataHobby2 = employeeList.stream()
         .flatMap(employee -> employee.getHobby().stream())
         .collect(Collectors.toList());
     dataHobby2.forEach(hobby -> System.out.println(hobby));
+    dataHobby.forEach(dt -> dt.forEach(hb -> System.out.println(hb)));
+    for(int i = 0; i < dataHobby.size(); i++){
+      for(int j=0; j < dataHobby.get(i).size(); j++){
+        System.out.println(dataHobby.get(i).get(j));
+      }
+    }
   }
 
 }
